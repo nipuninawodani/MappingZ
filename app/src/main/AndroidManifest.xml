@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kelani.mappingz">
+    package="com.example.mapapplication">
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MappingZ">
-        <activity
-            android:name=".DatabseActivity"
-            android:exported="false"
-            android:label="@string/title_activity_databse"
-            android:theme="@style/Theme.MappingZ.NoActionBar" />
+        android:theme="@style/Theme.MapApplication">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

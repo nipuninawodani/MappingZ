@@ -2,27 +2,41 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/viewFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.kelani.mappingz.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/addDataFragment"
+        android:name="com.example.mapapplication.AddDataFragment"
+        android:label="fragment_add_data"
+        tools:layout="@layout/fragment_add_data">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_addDataFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.kelani.mappingz.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/viewFragment"
+        android:name="com.example.mapapplication.ViewFragment"
+        android:label="fragment_view"
+        tools:layout="@layout/fragment_view" >
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_viewFragment_to_addDataFragment"
+            app:destination="@id/addDataFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.mapapplication.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+
+    </fragment>
+
+
 </navigation>
